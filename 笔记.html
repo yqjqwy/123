@@ -1,0 +1,56 @@
+001
+git 是一个代码管理工具
+多练习 , 要知道这个命令后面都发生了什么
+
+002 核心概念
+workspace : 工作区
+index 暂存区
+Repository 本地的版本库
+remote 远程代码库
+
+003 代码解释
+<!--新建一个文件-->
+echo "# Git_1705_stu" >> README.md
+
+<!--初始化git-->
+git init 
+
+<!--将 README.md 放到暂存区-->
+git add README.md
+
+<!--将暂存区里面的的文件放到本地代码仓库-->
+<!--引号里面的是注释 可以是中文-->
+git commit -m "first commit"
+
+<!--将本地代码库和远程代码仓库建立联系-->
+git remote add origin git@github.com:yvpeng528/git_1705_stu.git
+
+<!--将代码推送到master分支-->
+<!-- -u 可以省略 -->
+git push -u origin master 
+
+004
+git add * 将工作区的所有代码提交到暂存区
+
+git commit -m "注释" 暂存到本地代码仓库
+
+git push origin master 本地代码仓库到远程代码仓库
+
+git status 查看当前目录文件的状态
+
+git log : 查看提交的日志
+
+git clone XXXX(远程地址) 从远程下载一份代码到本地
+
+005
+安装完git后,  就有ssh-keygen 这个命令
+ssh-keygen : 生成秘钥
+
+输入: ssh-keygen + 回车 就会生成秘钥
+然后找到github 的个人设置 将秘钥拷贝到里面 才能进行使用
+
+删除  : git rm 
+
+006
+建立分支 git checkout -b XXX
+提交分支 git push origin XXX
